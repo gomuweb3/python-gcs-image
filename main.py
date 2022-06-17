@@ -28,7 +28,7 @@ def image_url():
 	images.delete_serving_url(blob_key)
 
 	try:
-		servingImage = images.get_serving_url(blob_key, filename='/gs/' + filepath, secure_url=True)
+		servingImage = images.get_serving_url(blob_key, secure_url=True)
 	except images.AccessDeniedError:
 		error = json.dumps({'error': 'Ensure the GAE service account has access to the object in Google Cloud Storage.'})
 		return json_response(error, 401)
