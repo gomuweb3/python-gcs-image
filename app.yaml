@@ -1,9 +1,8 @@
 api_version: 1
 runtime: python27
 threadsafe: true
-instance_class: F4
 automatic_scaling:
-  max_concurrent_requests: 25
+  max_concurrent_requests: 20
 
 libraries:
 - name: ssl
